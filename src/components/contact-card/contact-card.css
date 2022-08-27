@@ -1,0 +1,33 @@
+.contact-card {
+    padding: 2rem;
+    min-width: 21.875rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 0.25rem;
+    box-shadow: 1px 1px 10px 5px #f1f5f9;
+}
+
+.contact-us-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-us-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-mail {
+    font-size: 1.375rem;
+}
+
+.container-title {
+    font-size: 1.375rem;
+    font-weight: 700;
+}

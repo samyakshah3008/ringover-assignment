@@ -1,0 +1,22 @@
+.navbar-container {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.125rem;
+    align-items: center;
+}
+
+.logo {
+    height: 2.5rem;
+}
+
+.nav-pills-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.user-profile-pill {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
