@@ -1,0 +1,44 @@
+.card {
+    width: 13.125rem;
+    border-radius: 0.25rem;
+    box-shadow: 1px 1px 10px 5px #f1f5f9;
+
+}
+
+.card-container {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.icon {
+    height: 1.5rem;
+}
