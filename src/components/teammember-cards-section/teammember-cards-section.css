@@ -42,3 +42,18 @@
 .icon {
     height: 1.5rem;
 }
+
+.card-section-title {
+    font-size: 1.5rem;
+}
+
+.team-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-section-message {
+    font-size: 2rem;
+}
