@@ -14,7 +14,7 @@ export default function Navbar() {
           <div>HOME</div>
           <div>THE JOURNEY</div>
           <div onClick={() => navigate("/team")}>TEAM</div>
-          <div>STORE</div>
+          <div onClick={() => navigate("/store")}>STORE</div>
           <div>CONTACT</div>
         </div>
         <div className="user-profile-pill">
