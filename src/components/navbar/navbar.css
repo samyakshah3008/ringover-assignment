@@ -14,6 +14,17 @@
     display: flex;
     gap: 2rem;
     cursor: pointer;
+
+}
+
+.nav-pills-container a.active {
+    text-decoration: underline;
+}
+
+.individual-component {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
 }
 
 .user-profile-pill {

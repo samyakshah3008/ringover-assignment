@@ -1,0 +1,116 @@
+.journey-container {
+    position: relative;
+}
+
+.bg-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.bg-img {
+    width: 65rem;
+    height: 16rem;
+}
+
+.heading {
+    position: absolute;
+    color: white;
+    top: 10rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+}
+
+.content-parent-container {
+    background-color: black;
+    width: 65rem;
+    height: 30rem;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content-container {
+    position: absolute;
+    color: white;
+    left: 2rem;
+}
+
+.content-para {
+    max-width: 62rem;
+    margin-top: -2rem;
+}
+
+.circle {
+    position: relative;
+    border: 2px solid #999;
+    border-radius: 70%;
+    width: 0.2rem;
+    line-height: 0.4rem;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    z-index: 2;
+    padding: 0.1rem;
+    left: 0.5rem;
+}
+
+.circle:first-child {
+    margin-top: 2.7rem;
+}
+
+.circle:before {
+    position: absolute;
+    border: 1px solid #999;
+    width: 0;
+    height: 5.7rem;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -5.9rem;
+    margin-left: -1px;
+}
+
+.circle:first-child:before {
+    display: none;
+}
+
+.c-1 {
+    margin-top: 3.2rem;
+}
+
+.c-2 {
+    margin-top: 5.6rem;
+}
+
+.c-3 {
+    margin-top: 5.7rem;
+}
+
+.c-4 {
+    margin-top: 5.7rem;
+}
+
+.content-heading {
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.bg-logo-container {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+.bg-logo {
+    width: 40%;
+    height: 40%;
+    position: fixed;
+    left: 30%;
+    top: 53%;
+    opacity: 0.7;
+}

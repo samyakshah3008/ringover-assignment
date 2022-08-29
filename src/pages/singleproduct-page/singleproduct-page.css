@@ -1,0 +1,269 @@
+.designSpace {
+    padding: 1.5rem;
+    gap: 2rem;
+}
+
+.shoeRate {
+    display: flex;
+    flex-direction: row;
+}
+
+.shoe-size {
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgb(9, 9, 9);
+    text-decoration: none;
+}
+
+.rateProduct {
+    margin-top: 0.6rem;
+}
+
+.rate {
+    float: left;
+    padding: 0.8rem;
+    height: 0.5rem;
+}
+
+
+.icon {
+    height: 1.5rem;
+}
+
+.design {
+    display: flex;
+    flex-direction: row;
+}
+
+.mainImage {
+    margin-top: 30px;
+}
+
+.optionShoes {
+    margin-left: 1.4rem;
+    margin-top: 1.8rem;
+}
+
+.shoe-img {
+    height: 22.6rem;
+    width: 26rem;
+    object-fit: contain;
+}
+
+.shoes1>img {
+    height: 7rem;
+    width: 9rem;
+    margin-bottom: 0.5rem;
+}
+
+.buttonLink {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.share-btn {
+    border: 1px solid black;
+    background: transparent;
+    margin-right: 2rem;
+    padding: 0.5rem;
+}
+
+.add-to-cart-btn {
+    background: black;
+    color: white;
+    padding: 0.5rem;
+    min-width: 6.5rem;
+    cursor: pointer;
+}
+
+.designContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.product {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.company {
+    margin-top: -1.3rem;
+}
+
+.preferenceShoes {
+    margin-left: 1.7rem;
+}
+
+.discount {
+    margin-top: -0.9rem;
+}
+
+.price {
+    margin-top: 0.6rem;
+}
+
+.reviews {
+    margin-top: -0.2rem;
+}
+
+
+
+.size {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.2rem;
+}
+
+.size>ul {
+    padding: 0;
+    margin: 0;
+    clear: both;
+    list-style: none;
+}
+
+.size>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.6rem;
+    gap: 0.5rem;
+}
+
+.shoe-size-input:not(:checked),
+.shoe-size-input:checked {
+    position: absolute;
+    left: -9999%;
+}
+
+.shoe-size-input+label {
+    display: inline-block;
+    padding: 0.8rem;
+    cursor: pointer;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    margin-bottom: 0.8rem;
+}
+
+
+.block-container {
+    display: flex;
+}
+
+.block {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 1rem;
+}
+
+.front1::before {
+    content: "";
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: repeating-linear-gradient(0deg,
+            #000 0,
+            #000 10px,
+            #fff 10px,
+            #fff 20px);
+}
+
+.front1::after {
+    content: "";
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: repeating-linear-gradient(90deg,
+            #000 0,
+            #000 10px,
+            #fff 10px,
+            #fff 20px);
+    mix-blend-mode: difference;
+}
+
+.front2 {
+    background-color: red;
+}
+
+.front3::before {
+    content: "";
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: repeating-linear-gradient(0deg,
+            #fff 0,
+            #fff 10px,
+            aqua 10px,
+            aqua 20px);
+}
+
+.front3::after {
+    content: "";
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: repeating-linear-gradient(90deg,
+            #fff 0,
+            #fff 10px,
+            aqua 10px,
+            aqua 20px);
+    mix-blend-mode: difference;
+}
+
+.sole1 {
+    background-color: black;
+}
+
+.sole2 {
+    background-color: red;
+}
+
+.sole3 {
+    background-color: white;
+    border: 1px solid black;
+}
+
+
+.back-icon {
+    cursor: pointer;
+    font-size: 1.3rem;
+    margin-right: 2rem;
+    align-items: center;
+}
+
+.single-prod {
+    width: 68rem;
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    box-shadow: 0 0 10px 0 rgb(95 94 94 / 75%);
+
+}
+
+.head {
+    padding: 1rem;
+}
+
+.prod-heading {
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .designSpace {
+        flex-direction: column;
+    }
+
+    .shoe-img {
+        width: 20rem;
+    }
+
+    .design {
+        flex-wrap: wrap;
+    }
+
+    .single-prod {
+        width: 85%;
+        margin: 0 auto;
+    }
+}
