@@ -1,10 +1,28 @@
 import React from "react";
 import "./product-section.css";
 import * as AiIcons from "react-icons/ai";
-import productImage1 from "../../assets/images/shoe.jpg";
-import productImage2 from "../../assets/images/shoe2.png";
+import { products } from "../../database/products";
+import { useNavigate } from "react-router-dom";
+import { useFilter } from "../../contexts/filter-context";
+import { priceRangeFilter, sortByCategory } from "../../utils/filter-utils";
 
 export default function ProductSection() {
+  let navigate = useNavigate();
+
+  const { state } = useFilter();
+
+  const { loafers, sneakers } = state.categories;
+  const { isBetween1500to4000, isBetween4001to7000, isAbove7001 } =
+    state.priceRange;
+
+  const priceRange = priceRangeFilter(
+    products,
+    isBetween1500to4000,
+    isBetween4001to7000,
+    isAbove7001
+  );
+  const sortByCategoryFinalList = sortByCategory(priceRange, loafers, sneakers);
+
   return (
     <>
       <div className="products-container">
@@ -16,54 +34,58 @@ export default function ProductSection() {
           </div>
         </div>
         <div className="product-cards-container">
-          <div className="each-product-card">
-            <img className="product-img" src={productImage1} />
-            <div className="product-card-title">KSL 01</div>
-            <div className="card-details">
-              <div>Rs 2000</div>
-              <div>Ratings</div>
-            </div>
-          </div>
-          <div className="each-product-card">
-            <img className="product-img" src={productImage2} />
-            <div className="product-card-title">KSL 01</div>
-            <div className="card-details">
-              <div>Rs 2000</div>
-              <div>Ratings</div>
-            </div>
-          </div>
-          <div className="each-product-card">
-            <img className="product-img" src={productImage1} />
-            <div className="product-card-title">KSL 01</div>
-            <div className="card-details">
-              <div>Rs 2000</div>
-              <div>Ratings</div>
-            </div>
-          </div>
-          <div className="each-product-card">
-            <img className="product-img" src={productImage2} />
-            <div className="product-card-title">KSL 01</div>
-            <div className="card-details">
-              <div>Rs 2000</div>
-              <div>Ratings</div>
-            </div>
-          </div>
-          <div className="each-product-card">
-            <img className="product-img" src={productImage1} />
-            <div className="product-card-title">KSL 01</div>
-            <div className="card-details">
-              <div>Rs 2000</div>
-              <div>Ratings</div>
-            </div>
-          </div>
-          <div className="each-product-card">
-            <img className="product-img" src={productImage2} />
-            <div className="product-card-title">KSL 01</div>
-            <div className="card-details">
-              <div>Rs 2000</div>
-              <div>Ratings</div>
-            </div>
-          </div>
+          {sortByCategoryFinalList.length === 0 ? (
+            <>
+              <div>
+                No products matching in our database with your applied filter
+              </div>
+            </>
+          ) : (
+            <>
+              {sortByCategoryFinalList.map((eachProduct) => {
+                return (
+                  <>
+                    <div className="each-product-card">
+                      <img
+                        onClick={() =>
+                          navigate(`/singleproduct/${eachProduct._id}`)
+                        }
+                        className="product-img"
+                        src={eachProduct.imgLink}
+                      />
+                      <div className="product-card-title">
+                        {eachProduct.name}
+                      </div>
+                      <div className="card-details">
+                        <div>Rs.{eachProduct.price}</div>
+                        {eachProduct.rating === 4 ? (
+                          <>
+                            <div className="rating-section">
+                              <AiIcons.AiTwotoneStar className="filled-star" />
+                              <AiIcons.AiTwotoneStar className="filled-star" />
+                              <AiIcons.AiTwotoneStar className="filled-star" />
+                              <AiIcons.AiTwotoneStar className="filled-star" />
+                              <AiIcons.AiOutlineStar />
+                            </div>
+                          </>
+                        ) : (
+                          <>
+                            <div className="rating-section">
+                              <AiIcons.AiTwotoneStar className="filled-star" />
+                              <AiIcons.AiTwotoneStar className="filled-star" />
+                              <AiIcons.AiTwotoneStar className="filled-star" />
+                              <AiIcons.AiOutlineStar />
+                              <AiIcons.AiOutlineStar />
+                            </div>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  </>
+                );
+              })}
+            </>
+          )}
         </div>
       </div>
     </>
