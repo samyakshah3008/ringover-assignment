@@ -82,7 +82,7 @@
     background-color: var(--yellow-color);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
     .store-container {
         gap: 2rem;
