@@ -82,11 +82,6 @@
     background-color: var(--yellow-color);
 }
 
-@media screen and (max-width: 1080px) {
-    body {
-        font-size: 63.25%;
-    }
-}
 
 @media (max-width: 1024px) {
 
