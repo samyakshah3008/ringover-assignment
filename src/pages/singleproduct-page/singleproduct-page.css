@@ -249,7 +249,7 @@
     font-size: 1.5rem;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 900px) {
     .designSpace {
         flex-direction: column;
     }
