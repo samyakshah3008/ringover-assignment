@@ -48,6 +48,8 @@
 .product-img {
     height: 10rem;
     object-fit: contain;
+    cursor: pointer;
+
 }
 
 .product-card-title {
